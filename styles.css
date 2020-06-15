@@ -15,6 +15,13 @@ body {
         border: 5px solid #4a7fa6;
         margin: 10px;
     }
+.plannerHead {
+        font-size: 40px;
+}
+.timerPar {
+        font-size: 20px;
+        line-height: 26px;
+}
 .header {
         background-color: #00466d;
         color: white;
@@ -27,21 +34,25 @@ body {
         margin: 5px 20px;
         border: 3px solid #4a7fa6;
         background-color: beige;
-    }
-.timeBlock {
+}
+    .timeBlock {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         color: white;
         background-color: #00466d;
         padding: 25px;
         font-size: 18px;
         width: 12%;
         min-width: 105px;
-    }
+}
 .activityForm {
         display: flex;
         width: 100%;
-    }
+}
 .activitiesBlock {
         width: 90%;
+        height: 100px;
         padding: 5px 15px;
 }
 .now {
@@ -52,6 +63,7 @@ body {
         color: white;
 }
 .saveBlock {
+        display: flex;
         width: 10%;
         cursor: pointer;
 }
@@ -59,4 +71,39 @@ body {
         width: 100%;
         max-width: 50px;
         margin: auto;
-    }
+}
+
+@media screen and (max-width: 767px) {
+        .header {
+                padding: 15px;
+        }
+        .plannerHead {
+                font-size: 30px;
+                line-height: 30px;
+                margin-bottom: 10px;
+        }
+        .timerPar {
+                font-size: 16px;
+                line-height: 20px;
+            }
+        .calendarBlock {
+                flex-direction: column;
+        }
+        .activityForm {
+                flex-direction: column;
+        }
+        .timeBlock {
+                padding: 5px;
+                width: 100%;
+        }
+        .activitiesBlock {
+                width: 100%;
+        }
+        .saveBlock {
+                width: 100%;
+                padding: 5px;
+        }
+        .saveBlock img {
+                max-width: 35px;
+        }
+}

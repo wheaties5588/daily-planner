@@ -3,6 +3,9 @@ $(document).ready(function(){
     //Create body object
     var body = $("body");
 
+    // Variables
+    var hour = moment().hour();
+
     //Create all html assets
     function createHtmlAsset(elTag, elId) {
         var el = $(elTag);
@@ -17,7 +20,7 @@ $(document).ready(function(){
 
     //Create H1
     var h1 = createHtmlAsset("<h1>", "plannerHead");
-    h1.text("Daily Planner");
+    h1.text("Day Planner");
     $(header).append(h1);
 
     //Set interval to update the time by the second and add to header
@@ -53,6 +56,7 @@ $(document).ready(function(){
         timeBlock.addClass("timeBlock");
         timeBlock.attr("id", "timeBlock" + i);
 
+        // Set am/pm
         if (i > 12) {
             time = i - 12;
             amPM = "pm";
@@ -74,6 +78,13 @@ $(document).ready(function(){
         activitiesBlock.attr("id", "activitiesBlock" + i);
         activitiesBlock.attr("time", i);
         activitiesBlock.attr("placeholder", "Add events");
+
+        //Set colors
+        if (activitiesBlock.attr("time") == hour) {
+            activitiesBlock.addClass("now");
+        } else if (activitiesBlock.attr("time") < hour) {
+            activitiesBlock.addClass("past");
+        } else {}
 
 
         // On new page load pull the appropriate value from localstorage and set it to the value of the textarea
@@ -97,7 +108,7 @@ $(document).ready(function(){
     // Set to interval so this will automatically happen without having to refresh the page
     setInterval (function() {
         $(".activitiesBlock").map(function(i) {
-            var hour = moment().hour();
+            hour = moment().hour();
             
             if ($(this).attr("time") == hour) {
                 $(this).addClass("now");
