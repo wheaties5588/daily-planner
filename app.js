@@ -62,7 +62,7 @@ $(document).ready(function(){
             amPM = "pm";
         } else if (i < 12) {
             time = i;
-            amPM = "am";
+            amPM = "am";                                                                                                                                              
         } else {
             time = i;
             amPM = "pm";
@@ -126,13 +126,8 @@ $(document).ready(function(){
     saveBtn.on("click", function (ev) {
         ev.preventDefault();
         var thisTime = $(this).parent().find("textarea").attr("time");
-        console.log($(this).parent().find("textarea").attr("time"));
-        console.log($(this).parent().find("textarea").val());
         var inputText = $(this).parent().find("textarea").val();
-
         var lsKeyName = "eventText" + thisTime;
-
         localStorage.setItem(lsKeyName, inputText);
-
     });
 })
