@@ -1,3 +1,64 @@
-body {
-        background-color: beige;
+* {
+        font-family: 'Sriracha', cursive;
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
 }
+main {
+        background-color: #93959e;
+        overflow: auto;
+}
+
+body {
+        text-align: center;
+        background-color: beige;
+        border: 5px solid #4a7fa6;
+        margin: 10px;
+    }
+
+.header {
+        background-color: #00466d;
+        color: white;
+        padding: 25px;
+}
+
+.calendarBlock {
+        display: flex;
+        flex-direction: row;
+        padding: 15px;
+        margin: 5px 20px;
+        border: 3px solid #4a7fa6;
+        background-color: beige;
+    }
+
+.timeBlock {
+        color: white;
+        background-color: #00466d;
+        padding: 25px;
+        font-size: 18px;
+        width: 12%;
+        min-width: 105px;
+    }
+.activitiesBlock {
+        width: 80%;
+        padding: 5px 15px;
+}
+
+.now {
+        background-color: #beeabe;
+}
+
+.past {
+        background-color: #642c30;
+        color: white;
+}
+
+.saveBlock {
+        width: 10%;
+}
+
+.saveBlock img {
+        width: 100%;
+        max-width: 50px;
+        margin: auto;
+    }
