@@ -5,23 +5,21 @@
         margin: 0;
 }
 main {
-        background-color: #93959e;
+        background-color: #c1c3ce;
         overflow: auto;
+        padding: 15px 0px;
 }
-
 body {
         text-align: center;
         background-color: beige;
         border: 5px solid #4a7fa6;
         margin: 10px;
     }
-
 .header {
         background-color: #00466d;
         color: white;
         padding: 25px;
 }
-
 .calendarBlock {
         display: flex;
         flex-direction: row;
@@ -30,7 +28,6 @@ body {
         border: 3px solid #4a7fa6;
         background-color: beige;
     }
-
 .timeBlock {
         color: white;
         background-color: #00466d;
@@ -39,24 +36,25 @@ body {
         width: 12%;
         min-width: 105px;
     }
+.activityForm {
+        display: flex;
+        width: 100%;
+    }
 .activitiesBlock {
-        width: 80%;
+        width: 90%;
         padding: 5px 15px;
 }
-
 .now {
         background-color: #beeabe;
 }
-
 .past {
         background-color: #642c30;
         color: white;
 }
-
 .saveBlock {
         width: 10%;
+        cursor: pointer;
 }
-
 .saveBlock img {
         width: 100%;
         max-width: 50px;
