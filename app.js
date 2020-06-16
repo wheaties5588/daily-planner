@@ -31,11 +31,9 @@ $(document).ready(function(){
     }, 1000)
     $(header).append(par);
 
-
     //Create main div
     var main = createHtmlAsset("<main>", "mainDiv");
     $(body).append(main);
-
 
     //Create time slots from 9am to 5pm
     var calendarStartHour = 9;
@@ -86,10 +84,8 @@ $(document).ready(function(){
             activitiesBlock.addClass("past");
         } else {}
 
-
         // On new page load pull the appropriate value from localstorage and set it to the value of the textarea
         activitiesBlock.val(localStorage.getItem("eventText" + i))
-
 
         saveBlock.addClass("saveBlock");
         saveBlock.attr("id", "saveBlock" + i);
