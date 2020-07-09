@@ -26,6 +26,7 @@ matt.wieciech@gmail.com
 ## Technologies Used
 ​
 Javascript  
+Moment.js  
 HTML5  
 CSS  
 ​
